@@ -37,9 +37,40 @@ console.log (mostrarLoteria);
 
 // Ejercicio 3 --------------------------------------------------------->
 
+function capturarNumeros() {
+    const numeros = [];
+    let numero;
+
+    do {
+        numero = parseInt(prompt("Ingresa un número (ingresa 0 para terminar):"));
+        if (!isNaN(numero) && numero !== 0) {
+            numeros.push(numero);
+        }
+    } while (numero !== 0);
+
+    console.log("Lista de números capturados:", numeros);
+}
+
+capturarNumeros();
 
 // Ejercicio 4 --------------------------------------------------------->
 
+function capturarPalabras() {
+    const palabras = [];
+    let entrada;
+
+    do {
+        entrada = prompt("Ingresa una palabra o letra (presiona 'Cancelar' o 'Aceptar' sin escribir nada para terminar):");
+        if (entrada !== null && entrada !== "") {
+            palabras.push(entrada);
+        }
+    } while (entrada !== null && entrada !== "");
+
+    const resultado = palabras.join('');
+    console.log("Palabras capturadas y concatenadas:", resultado);
+}
+
+capturarPalabras();
 
 // Ejercicio 5 --------------------------------------------------------->
 
