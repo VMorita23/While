@@ -74,3 +74,28 @@ capturarPalabras();
 
 // Ejercicio 5 --------------------------------------------------------->
 
+function mensajesPorDia() {
+    let dia;
+
+    do {
+        dia = prompt("Ingresa un día de la semana (ej: lunes, jueves, domingo, etc):");
+
+        if (dia) {
+            switch (dia.toLowerCase()) {
+                case "lunes":
+                    alert("¡Ánimo, es lunes!");
+                    break;
+                case "viernes":
+                    alert("¡Es viernes y el cuerpo lo sabe!");
+                    break;
+                case "domingo":
+                    alert("Ve a descansar");
+                    break;
+                default:
+                    alert(`¡Feliz ${dia}!`);
+            }
+        }
+    } while (dia && dia.toLowerCase() !== "domingo");
+}
+
+mensajesPorDia();
